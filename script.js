@@ -1,8 +1,5 @@
 
 window.onload = function(){
-    // let rangeInput = document.getElementById('rating')
-    // button.addEventListener('onchange', show_value);
-
     const selectElement = document.getElementById('rating');
 
     selectElement.addEventListener('change', (event) => {
@@ -19,6 +16,9 @@ window.onload = function(){
 
     function searchQuestion(){
         document.getElementById('loaderHere').style.display='block';
+        document.getElementById('questionHere').style.display = 'none';
+        document.getElementById('para1').style.display = 'none';
+        document.getElementById('startTime1').style.display = 'none';
         fetch("https://codeforces.com/api/problemset.problems")
         .then(data => data.json())
         .then(question => {
@@ -92,29 +92,6 @@ window.onload = function(){
                 document.getElementById('loaderHere').style.display='none';
 
             }
-            // var questionIndexHere = Math.floor((Math.random() * questionArray.length) + 1);
-            // document.getElementById('questionHere').style.display = 'block';
-            // document.getElementById('para1').style.display = 'block';
-            // document.getElementById('startTime1').style.display = 'block';
-
-            // var questionName = questionArray[questionIndexHere]['name'];
-            // var contestId = (questionArray[questionIndexHere]['contestId']);
-            // var index = questionArray[questionIndexHere]['index'];
-            // const solvedCount = questionList["result"]["problemStatistics"][questionIndexHere]["solvedCount"];
-
-            // var questionIndex = 90;
-            // var questionName = questionList["result"]["problems"][questionIndex]['name'];
-            // var contestId = (questionList["result"]["problems"][questionIndex]['contestId']);
-            // var index = questionList["result"]["problems"][questionIndex]['index'];
-            // const solvedCount = questionList["result"]["problemStatistics"][questionIndex]["solvedCount"];
-
-            // var url1=document.querySelector(".temp1");
-            // url1.getAttribute("href");
-            // url1.setAttribute("href",baseURL + contestId + '/' + index);
-            // url1.textContent = questionName;
-            // document.getElementById("startTime1").innerHTML = "Solved By : " + solvedCount.toString();
-            // console.log(solvedCount);
-            // console.log(questionList["result"]["problems"][0]);
 
         })
     }
