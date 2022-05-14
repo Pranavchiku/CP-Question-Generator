@@ -1,0 +1,96 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Coding Contest</title>
+    <link rel="stylesheet" href="newstyle.css">
+    <style>
+        input[type="range"]{
+        width:250px;
+        }
+        .loader {
+        border: 16px solid #f3f3f3;
+        border-radius: 50%;
+        border-top: 16px solid #3498db;
+        width: 100px;
+        height: 100px;
+        -webkit-animation: spin 2s linear infinite; /* Safari */
+        animation: spin 2s linear infinite;
+        }
+
+        /* Safari */
+        @-webkit-keyframes spin {
+        0% { -webkit-transform: rotate(0deg); }
+        100% { -webkit-transform: rotate(360deg); }
+        }
+
+        @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <script src="script.js"></script>
+    
+    <div class="box">
+        <br>
+        <h2>Tags:</h2>
+        <br>
+        <table>
+            <tr>
+                <td><input type="checkbox" name="tag1" id="tag1"></td>
+                <td >binary search  </td>
+                <td><input type="checkbox" name="tag2" id="tag2"></td>
+                <td >brute force </td>
+                <td><input type="checkbox" name="tag3" id="tag3"></td>
+                <td >greedy</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="tag4" id="tag4"></td>
+                <td >Dynamic Prog  </td>
+                <td><input type="checkbox" name="tag5" id="tag5"></td>
+                <td >graphs       </td>
+                <td><input type="checkbox" name="tag6" id="tag6"></td>
+                <td >sorting      </td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="tag7" id="tag7"></td>
+                <td >Dfs & similar  </td>
+                <td><input type="checkbox" name="tag8" id="tag8"></td>
+                <td >trees </td>
+                <td><input type="checkbox" name="tag9" id="tag9"></td>
+                <td >two pointers </td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" name="tag10" id="tag10"></td>
+                <td >Shortest Path  </td>
+                <td><input type="checkbox" name="tag11" id="tag11"></td>
+                <td >hashing </td>
+                <td><input type="checkbox" name="tag12" id="tag12"></td>
+                <td >implementation </td>
+            </tr>
+            
+        </table>
+        <br>
+        <p>Rating: 800-3500</p>
+        <!-- oninput="this.nextElementSibling.value = this.value" -->
+        <input type="range" min="800" max="3500" value="800" id="rating">
+        <output id="slider_value">800</output>
+        <button id='fillForm'>Search</button>
+        <br>
+        <div class="loader" style="display:none;" id="loaderHere"></div>
+        <h2 class="center" style="display:none" id="questionHere">Question:</h2>
+            <div class="floating-label" >
+                <p style="margin: 5px 20px;
+                text-align: center;
+                font-size: 14px;display:none" id ="para1"><a id="url1" class="temp1" target="_blank" href="#">Loading...</a></p>
+                <p style="margin: 5px 20px;
+                text-align: center;
+                font-size: 10px;display:none" id="startTime1">Loading...</p>
+            </div>
+    </div>
+    
+</body>
+
+</html>
